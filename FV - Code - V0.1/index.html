@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <script type="text/javascript" src="assets/d3.v2.js"></script>
+        <script type="text/javascript" src="assets/jszip.js"></script>
+        <script type="text/javascript" src="assets/xlsx.min.js"></script>
+        <!-- Multi select plugin -->
+        <script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/multiple-select.js"></script>
+        <!-- End Multi select plugin -->
+        <script type="text/javascript" src="assets/app.js"></script>
+        <link rel="stylesheet" href="assets/multiple-select.css">
+        <style>
+            svg .yaxis text {
+                cursor: pointer;
+            }
+
+            svg .project_types .domain {
+                fill: none;
+            }
+
+            #menu p span {
+                width: 0.6em;
+                height: 0.6em;
+                display: inline-block;
+                border: 2px solid #383838;
+                border-radius: 5px;
+                -webkit-border-radius: 5px; 
+                -moz-border-radius: 5px; 
+            }
+
+            #menu p {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <h2>Filters:</h2>
+            Filter by program type: <select id="project_type_filter" multiple="multiple"></select>
+            Filter by project title: <select id="project_title_filter" multiple="multiple"></select>
+            <h2>Sort:</h2>
+            <button id="project_type_sort">Sort by program type</button>
+            <button id="project_title_sort">Sort by project title</button>
+            <h2>Legend:</h2>
+        </div>
+        <div id="timeline"></div>   
+    </body>
+</html>
